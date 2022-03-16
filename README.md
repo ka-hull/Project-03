@@ -5,10 +5,32 @@ Team Project 03
 * [Stories](https://trello.com/b/4WNrLBWO/cs-350-group-project)
 # Initial Draft
 
-```
-class Mutant {
-    int id
+@startuml
 
-    getChanges() -> Collection<Change>
+title Classes - Class Diagram
+
+
+class File {
+  +void readFile()
+  +void displayFile()
+  +bool checkName()
 }
-```
+
+class Name {
+  +void findNames()
+  +void tagNames()
+}
+
+class Library {
+  Collection<names>
+  +void inputNames()
+  +bool checkDuplicates()
+}
+
+class TestInterface {
+  
+}
+
+
+
+@enduml
