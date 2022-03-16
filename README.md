@@ -10,21 +10,34 @@ Team Project 03
 title Classes - Class Diagram
 
 
-class File {
-  +void readFile()
-  +void displayFile()
+class Driver {
+  +string readBlock(BufferedReader)
+  +void readBlocks(BufferedReader)
+  +void displayMarkedUpBlock()
   +bool checkName()
 }
 
-class Name {
-  +void findNames()
-  +void tagNames()
+class Block{
+//Breaks up string block into tokens 
 }
 
-class Library {
-  Collection<names>
-  +void inputNames()
-  +bool checkDuplicates()
+class Token{
+//supply tokens and token interfaces 
+}
+
+class FeatureSet{
+
+}
+
+class Extractor {
+  +void findNames()
+  +void markPersonalNames()
+}
+
+class Gazetteer {
+  Set<string> known
+  +void acquireList()
+  +bool contains(string)
 }
 
 class TestInterface {
