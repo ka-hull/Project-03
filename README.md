@@ -11,10 +11,13 @@ title Classes - Class Diagram
 
 
 class Driver {
-  +string readBlock(BufferedReader)
-  +void readBlocks(BufferedReader)
-  +void displayMarkedUpBlock()
-  +bool checkName()
+  //Default Constructor
+  +private string block; 
+  +public string readBlock(BufferedReader)
+  +public void readBlocks(BufferedReader)
+  +pubilc void displayMarkedUpBlock()
+  +public bool checkName()
+  //to string 
 }
 
 class Block{
