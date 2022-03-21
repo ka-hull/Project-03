@@ -19,14 +19,21 @@ class Driver {
 
 class Block{
 //Breaks up string block into tokens 
+  String rawBlock
+  Collection<Token> tokens
+  
+  breakIntoTokens()
 }
 
 class Token{
 //supply tokens and token interfaces 
+  String rawToken
+  ? nameClassification
+  FeatureSet features
 }
 
 class FeatureSet{
-
+  merge()
 }
 
 class Extractor {
