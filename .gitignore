@@ -8,3 +8,4 @@ build
 #Eclipse rule
 .project
 .classpath
+.settings
