@@ -6,9 +6,9 @@ package edu.odu.cs.cs350;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class DriverTest {
     @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
+        Driver classUnderTest = new Driver();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 }
