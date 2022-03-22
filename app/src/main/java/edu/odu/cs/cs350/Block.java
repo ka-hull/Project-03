@@ -1,5 +1,7 @@
 package edu.odu.cs.cs350;
 
+import java.util.*;
+
 public class Block {
     private String rawBlock;
 
@@ -11,5 +13,5 @@ public class Block {
         return rawBlock;
     }
 
-    private Array<String> tokens;
+    private ArrayList<String> tokens;
 }
