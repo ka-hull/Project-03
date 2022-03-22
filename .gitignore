@@ -1,3 +1,10 @@
 # Java Project
 build
 **.class
+
+#Gradle Rules
+.gradle
+
+#Eclipse rule
+.project
+.classpath
