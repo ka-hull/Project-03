@@ -3,12 +3,12 @@
  */
 package edu.odu.cs.cs350;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+// import org.junit.Test;
+// import static org.junit.Assert.*;
 
-public class DriverTest {
-    @Test public void appHasAGreeting() {
-        Driver classUnderTest = new Driver();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-    }
-}
+// public class DriverTest {
+// @Test public void appHasAGreeting() {
+// Driver classUnderTest = new Driver();
+// assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+// }
+// }

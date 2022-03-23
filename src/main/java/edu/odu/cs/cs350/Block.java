@@ -3,7 +3,6 @@ package edu.odu.cs.cs350;
 import java.util.*;
 
 public class Block {
-
     private String rawBlock;
     private ArrayList<Token> tokens;
 
