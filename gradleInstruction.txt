@@ -1,0 +1,19 @@
+Gradle commands:
+
+//To build:
+gradle build
+
+//To clean previous build:
+gradle clean
+
+//To run the project. Reading content of file and redirecting to gradle run task
+
+gradle run < inputText.txt (For Windows) - (Should work for Linux)
+
+cat inputText.txt | gradle run (For Windows PowerShell)
+
+
+//To test:
+
+gradle test
+
