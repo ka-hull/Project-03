@@ -16,6 +16,23 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    //Create a jar file name Driver.jar inside build/libs folder
+    baseName = "Driver"
+
+    manifest {
+        attributes(
+            "Main-Class": "edu.odu.cs.cs350.Driver"
+        )
+    }
+}
+
+run{
+    //Accept command line user input as standard input
+    main = "edu.odu.cs.cs350.Driver"
+    standardInput = System.in
+}
+
 dependencies {
     // Use JUnit test framework.
    // testImplementation 'junit:junit:4.13.2'
