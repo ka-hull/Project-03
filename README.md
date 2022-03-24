@@ -8,7 +8,6 @@ Team Project 03
 @startuml
 
 title Classes - Class Diagram
-//Test for remote repository
 
 
 class Driver {
