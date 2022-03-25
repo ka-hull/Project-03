@@ -7,4 +7,8 @@ public class Token {
     public Token(String token) {
         rawToken = token;
     }
+
+    public String getRawToken() {
+        return rawToken;
+    }
 }
