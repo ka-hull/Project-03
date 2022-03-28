@@ -4,6 +4,7 @@
 package edu.odu.cs.cs350;
 import java.util.Arrays;
 import java.io.*;
+import java.lang.StringBuilder;
 
 public class Driver {
     private String block; 
@@ -21,10 +22,27 @@ public class Driver {
 
     }
 
-    public void displayMArkedUpBlock(){
+    public void displayMarkedUpBlock(){
 
+        String markedUp = Extractor.markPersonalNames(block);
+        System.out.println(markedUp);
+    }
+    
+    //might want to think about using a scanner here so we can read one word at a time 
+    public static String readBlock(BufferedReader reader){
+
+         StringBuilder newBlock = new StringBuilder();
+         String word;
+
+         while ((word = reader.next()) != "</NER>"){
+
+             newBlock.append(word);
+         }
+
+         return newBlock.toString();
 
     }
+
 
     
 
