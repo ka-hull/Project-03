@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.io.*;
 
 public class Driver {
+    private String block; 
+
     public static void main(String[] args) throws IOException {
     // // Enter data using BufferReader
     BufferedReader reader = new BufferedReader(
@@ -18,4 +20,12 @@ public class Driver {
     System.out.println(name);
 
     }
+
+    public void displayMArkedUpBlock(){
+
+
+    }
+
+    
+
 }

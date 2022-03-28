@@ -41,7 +41,8 @@ class FeatureSet{
 
 class Extractor {
   +void findNames()
-  +void markPersonalNames()
+  +static String 
+        markPersonalNames(String textBlock)
 }
 
 class Gazetteer {
