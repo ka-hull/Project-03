@@ -36,6 +36,7 @@ class Token{
 }
 
 class FeatureSet{
+  //Array for features (punctuation, capitals, etc)
   merge()
 }
 
