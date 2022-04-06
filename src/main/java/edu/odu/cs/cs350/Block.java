@@ -1,25 +1,38 @@
 package edu.odu.cs.cs350;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Block {
+
     private String rawBlock;
     private ArrayList<Token> tokens;
 
+    /**
+     * 
+     * @param block is the string containing all text in a block
+     */
     public Block(String block) {
         rawBlock = block;
     }
 
+    /**
+     * @return a raw block with no tags
+     */
     public String getRawBlock() {
         return rawBlock;
     }
 
+    /**
+     * @return size of list of tokens
+     */
     public int getTokenSize() {
         return tokens.size();
     }
 
-    public ArrayList<Token> breakIntoTokens() {
-
+    /**
+     * Breaks a block of text down into individual words called tokens
+     */
+    public void breakIntoTokens() {
         tokens = new ArrayList();
         StringBuffer temp = new StringBuffer();
 
@@ -40,6 +53,12 @@ public class Block {
         Token tempToken = new Token(temp.toString());
         tokens.add(tempToken);
 
+    }
+
+    /**
+     * @return a list of tokens
+     */
+    public ArrayList<Token> getTokens() {
         return tokens;
     }
 }
