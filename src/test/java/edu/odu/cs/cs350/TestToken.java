@@ -12,6 +12,8 @@ public class TestToken {
     public void testConstructor() {
         Token t = new Token("string.");
         String s = t.getRawToken();
+        ArrayList<Token> testFeatures = t.getFeatures();
         assertEquals(s, "string.");
+        assertThat(testFeatures, nullValue());
     }
 }
