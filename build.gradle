@@ -12,8 +12,8 @@ plugins {
     id 'jacoco'            //Test coverage 
     id 'pmd'               // Code Analysis
     id 'com.github.spotbugs' version '5.0.5'  //Code Analysis
-    id 'org.jbake.site t' version '5.5.0'     //Website construction
-    id 'edu.odu.cs.report_accumulator' version '1.4'    //Graphs in Webpages
+    //id 'org.jbake.site t' version '5.5.0'     //Website construction
+    //id 'edu.odu.cs.report_accumulator' version '1.4'    //Graphs in Webpages
     id 'org.hidetake.ssh' version '2.10.1'    //ssh takes in Gradle
 }
 
@@ -54,3 +54,32 @@ application {
     // Define the main class for the application.
     mainClass = 'edu.odu.cs.cs350.Driver'
 }
+
+tasks.named('test') {
+    useJUnitPlatform()
+    ignoreFailures = true
+}
+
+tasks.named('javadoc') {
+    options.with {
+        links 'https://docs.oracle.com/javase/8/docs/api/', 'gradle/javadocs/jdk'
+    }
+    failOnError = false;
+}
+
+build.dependsOn javadoc
+
+tasks.register('reports') {
+    dependsOn test
+    dependsOn javadoc
+}
+
+tasks.register('deployReports') {
+    dependsOn reports
+    doLast {
+        ant.copy (todir: 'build/gh-pages') {
+            fileset(dir: 'build/reports')
+        }
+    }
+}
+
