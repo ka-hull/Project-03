@@ -78,7 +78,7 @@ tasks.register('deployReports') {
     dependsOn reports
     doLast {
         ant.copy (todir: 'build/gh-pages') {
-            fileset(dir: 'build/reports')
+            fileset(dir: 'build/jbake')
         }
     }
 }
