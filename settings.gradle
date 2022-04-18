@@ -17,5 +17,6 @@ pluginManagement {
 }
 rootProject.name = 'Project-03'
 include('app')
+include 'report_accumulator'
 
 
