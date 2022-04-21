@@ -3,7 +3,7 @@ package edu.odu.cs.cs350;
 public class FeatureSet {
 	
 	/**
-	 * Create arrays to hold the features
+	 * Create arrays to hold the features for prefixes
 	 */
 	
 	private static final String[] prefixes = { "Mr", "Ms", "Mrs", 
@@ -11,39 +11,93 @@ public class FeatureSet {
 			"Sister", "Father", "Professor", "General", 
 			"Rabbi", "Reverend"};
 	
+	/**
+	 * Create arrays to hold the features for icons
+	 */
+	
 	private static final String[] iconic = { "Bridge", "University", 
 			"Statue", "Church", "Road"};
 	
 	/**
-	 * Boolean to check if features are found in token
-	 * Eclipse recommended I format it this way
-	 * if there is an issue with it I will fix it
+	 * Create arrays to hold the features for last names
 	 */
 	
-	boolean theToken;
+	private static final String[] last = {"Smith", "Johnson",
+			"Williams", "Brown", "Potter"};
 	
-	public FeatureSet(String token)
-	{
-		this.theToken = token != null;
-	}
+	/**
+	 * Create arrays to hold the features for first names
+	 */
 	
-	void isPrefix()
-	{
-		for (String prefix : prefixes)
+	private static final String[] first = {"John", "Stanley",
+			"Marcus", "James", "Harry"};
+	
+	/**
+	 * String to hold token 
+	 */
+	
+	String theToken;
+	
+	FeatureSet(String token)
 		{
-			if(this.theToken = prefix != null) 
-				return;
-	}
-	}
+			this.theToken = token;
+		}
 	
-	void isIconic()
-	{
-		for (String icon : iconic)
+	/**
+	 * Boolean to check if its true that the token is a prefix
+	 */
+	
+	boolean isPrefix()
 		{
-			if(this.theToken = icon != null) 
-				return;
-	}
-	}
+			for (String prefix : prefixes)
+				{
+					if(this.theToken == prefix) 
+						return true;
+				}
+						return false;
+		}
+	
+	/**
+	 * Boolean to check if its true that the token is an icon
+	 */
+	
+	boolean isIconic()
+		{
+			for (String icon : iconic)
+				{
+					if(this.theToken == icon) 
+						return true;
+				}
+						return false;
+		}
+	
+	/**
+	 * Boolean to check if its true that the token is a last name
+	 */
+	
+	boolean isLast()
+		{
+			for (String lastN : last)
+				{
+					if(this.theToken == lastN) 
+						return true;
+				}
+						return false;
+		}
+	
+	/**
+	 * Boolean to check if its true that the token is a first name
+	 */
+	
+	boolean isFirst()
+		{
+			for (String firstN : first)
+				{
+					if(this.theToken == firstN) 
+						return true;
+				}
+						return false;
+		}
 	
 	/**
 	 * This is all old code commented out as reference
