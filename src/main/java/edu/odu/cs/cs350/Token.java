@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Token {
 
     private String rawToken;
-    private ArrayList<FeatureSet> features;
+    private String wordClassification;
 
     /**
      * @param token is a string containing a word to set as rawToken
@@ -22,9 +22,29 @@ public class Token {
     }
 
     /**
-     * @return a list of features for a token
+     * Determines whether the token is part of a name or not
+     * 
      */
-    public ArrayList getFeatures() {
-        return features;
+    public void determineWordClassification() {
+        FeatureSet feature = new FeatureSet(rawToken);
+        boolean prefix = feature.isPrefix(rawToken);
+        boolean firstName = feature.isFirst(rawToken);
+        boolean lastName = feature.isLast(rawToken);
+        if (prefix == true)
+            wordClassification = "Part of a name";
+        else if (firstName == true)
+            wordClassification = "First Name";
+        else if (lastName == true)
+            wordClassification = "Last Name";
+        else
+            wordClassification = "Not a Name";
+    }
+
+    /**
+     * 
+     * @return the word classifcation of a token
+     */
+    public String getWordClassification() {
+        return wordClassification;
     }
 }

@@ -12,8 +12,16 @@ public class TestToken {
     public void testConstructor() {
         Token t = new Token("string.");
         String s = t.getRawToken();
-        ArrayList<Token> testFeatures = t.getFeatures();
+        String w = t.getWordClassification();
         assertEquals(s, "string.");
-        assertThat(testFeatures, nullValue());
+        assertThat(w, nullValue());
+    }
+
+    @Test
+    public void testDetermineWordClassification() {
+        Token t = new Token("Mr");
+        t.determineWordClassification();
+        String s = t.getWordClassification();
+        assertEquals(s, "Part of a name");
     }
 }
