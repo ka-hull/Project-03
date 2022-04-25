@@ -74,11 +74,11 @@ tasks.named('javadoc') {
     failOnError = false;
 }
 
-build.dependsOn javadoc
+build.dependsOn 'javadoc'
 
 tasks.register('reports') {
-    dependsOn test
-    dependsOn javadoc
+    dependsOn 'test'
+    dependsOn 'javadoc'
 }
 
 tasks.register('deployReports') {
