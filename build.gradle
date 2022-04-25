@@ -8,6 +8,8 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java'
+    id 'java-library'
     id 'application'
     id 'jacoco'            //Test coverage 
     id 'pmd'               // Code Analysis
@@ -39,6 +41,7 @@ run{
     standardInput = System.in
 }
 
+
 dependencies {
     // Use JUnit test framework.
    // testImplementation 'junit:junit:4.13.2'
@@ -54,6 +57,8 @@ application {
     // Define the main class for the application.
     mainClass = 'edu.odu.cs.cs350.Driver'
 }
+
+
 /*
 reportStats {
     reportsURL = 'https://project/reports/url/'
