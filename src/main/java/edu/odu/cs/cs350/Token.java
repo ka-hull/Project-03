@@ -6,6 +6,7 @@ public class Token {
 
     private String rawToken;
     private String wordClassification;
+    private ArrayList<FeatureSet> features;
 
     /**
      * @param token is a string containing a word to set as rawToken
@@ -46,5 +47,13 @@ public class Token {
      */
     public String getWordClassification() {
         return wordClassification;
+    }
+
+    /**
+     * 
+     * @return a list of features for a token
+     */
+    public ArrayList<FeatureSet> getFeatures() {
+        return features;
     }
 }

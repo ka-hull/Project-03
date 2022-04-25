@@ -13,8 +13,10 @@ public class TestToken {
         Token t = new Token("string.");
         String s = t.getRawToken();
         String w = t.getWordClassification();
+        ArrayList<FeatureSet> testFeatures = t.getFeatures();
         assertEquals(s, "string.");
         assertThat(w, nullValue());
+        assertThat(testFeatures, nullValue());
     }
 
     @Test
